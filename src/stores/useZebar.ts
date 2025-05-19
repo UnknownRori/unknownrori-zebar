@@ -15,7 +15,6 @@ const useZebar = defineStore('useZebar', () => {
 
   const event = ref(providers.outputMap);
   providers.onOutput(() => {
-    console.log(providers.outputMap);
     event.value = providers.outputMap
   })
 

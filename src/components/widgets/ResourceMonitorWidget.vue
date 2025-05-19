@@ -12,6 +12,7 @@ import {
 } from 'lucide-vue-next';
 import { BlinkTransition } from '@/components/ui/transition';
 import { Island } from '@/components/ui/island';
+import { ResourceItem } from '@/components/ui/resources';
 
 const zebar = useZebar();
 
@@ -36,20 +37,11 @@ function getBatteryIcon() {
 <template>
   <BlinkTransition>
     <Island class='flex items-center justify-center gap-8'>
-      <div :class='cn("flex justify-center items-center gap-1", zebar.event.cpu?.usage as number > 80 ?
-        "text-red-500" : zebar.event.cpu?.usage as number > 60 ? "text-yellow-500" : "text-white")'>
-        <Cpu class='w-4' />
-        {{ Math.round(zebar.event.cpu?.usage as number) }}%
-      </div>
+      <ResourceItem :icon='Cpu' :value='zebar.event.cpu?.usage as number' :high='80' :medium='60' />
+      <ResourceItem :icon='MemoryStick' :value='zebar.event.memory?.usage as number' :high='80' :medium='60' />
 
-      <div :class='cn("flex justify-center items-center gap-1", zebar.event.memory?.usage as number > 80 ?
-        "text-red-500" : zebar.event.memory?.usage as number > 60 ? "text-yellow-500" : "text-white")'>
-        <MemoryStick class='w-4' />
-        {{ Math.round(zebar.event.memory?.usage as number) }}%
-      </div>
-
-      <div :class='cn("flex justify-center items-center gap-1", zebar.event.battery?.chargePercent as number < 35 ?
-        "text-red-500" : zebar.event.battery?.chargePercent as number < 60 ? "text-yellow-500" : "text-white")'>
+      <div :class='cn("flex justify-center items-center gap-1", zebar.event.battery?.chargePercent as number < 25 ?
+        "text-red-500" : zebar.event.battery?.chargePercent as number < 40 ? "text-yellow-500" : "text-white")'>
         <component :is='getBatteryIcon()' />
         {{ Math.round(zebar.event.battery?.chargePercent as number) }}%
       </div>
