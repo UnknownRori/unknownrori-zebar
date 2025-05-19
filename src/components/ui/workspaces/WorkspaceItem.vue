@@ -12,7 +12,7 @@ const zebar = useZebar();
 
 <template>
   <button :class='cn("duration-300 rounded cursor-pointer py-1 w-8", workspace.hasFocus ?
-    "text-white" :
+    "text-white font-bold" :
     "text-gray-500")'
     @click='() => zebar.event.glazewm != null ? zebar.event.glazewm.runCommand(`focus --workspace ${workspace.name}`) : false'>
     {{ workspace.name }}
