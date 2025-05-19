@@ -41,7 +41,9 @@ function getBatteryIcon() {
       <ResourceItem :icon='MemoryStick' :value='zebar.event.memory?.usage as number' :high='80' :medium='60' />
 
       <div :class='cn("flex justify-center items-center gap-1", zebar.event.battery?.chargePercent as number < 25 ?
-        "text-red-500" : zebar.event.battery?.chargePercent as number < 40 ? "text-yellow-500" : "text-white")'>
+        "text-red-500 animate-pulse" : zebar.event.battery?.chargePercent as number < 40 ?
+          "text-yellow-500" : "text-white", zebar.event.battery?.isCharging ?
+        "text-green-500 animate-pulse" : "")'>
         <component :is='getBatteryIcon()' />
         {{ Math.round(zebar.event.battery?.chargePercent as number) }}%
       </div>

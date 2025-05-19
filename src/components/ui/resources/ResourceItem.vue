@@ -11,7 +11,7 @@ defineProps<{
 
 <template>
   <div :class='cn("flex justify-center items-center gap-1", value as number > high ?
-    "text-red-500" : value > medium ? "text-yellow-500" : "text-white")'>
+    "text-red-500 animate-pulse" : value > medium ? "text-yellow-500" : "text-white")'>
     <component :is='$props.icon' class='w-4' />
     {{ Math.round(value) }}%
   </div>
