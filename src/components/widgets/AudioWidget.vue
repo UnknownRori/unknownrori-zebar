@@ -17,7 +17,7 @@ const media = useMediaPlayer();
     <Island v-if='media.event' class='justify-center
       items-center text-center cursor-pointer' :hoverable='true' @click='zebar.event.media?.togglePlayPause()'>
       <Music4 class='w-4' />
-      {{ truncateText(media.event.title as string, 12) }}
+      {{ truncateText(media.event.title as string, 24) }}
       <div
         class="absolute left-0 bottom-0 h-1 rounded-full -z-10 bg-cyan-400 animate-pulse shadow-[0_0_8px_#22d3ee,0_0_16px_#22d3ee]"
         :style="{ width: media.progress.toFixed(2) + '%' }"></div>
