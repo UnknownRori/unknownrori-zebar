@@ -35,6 +35,9 @@ const useMediaPlayer = defineStore('useMediaPlayer', () => {
       } else if (data.value.position != state.event.media.currentSession.position || data.value.isPlaying != state.event.media.currentSession.isPlaying) {
         data.value = state.event.media.currentSession;
         time = data.value?.position as number;
+        const endTime = data.value.endTime as number
+        const position = time as number
+        progress.value = (position / endTime) * 100;
         return;
       }
 

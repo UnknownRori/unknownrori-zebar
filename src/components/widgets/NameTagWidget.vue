@@ -1,5 +1,5 @@
 <template>
-  <span class='flex justify-center items-center'>
+  <span class='relative flex justify-center items-center font-bold'>
     UnknownRori II
   </span>
 </template>
