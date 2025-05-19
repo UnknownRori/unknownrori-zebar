@@ -1,5 +1,5 @@
 <template>
-  <span class='text-sm'>
+  <span class='flex justify-center items-center'>
     UnknownRori II
   </span>
 </template>

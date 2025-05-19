@@ -4,13 +4,13 @@ import { ref } from 'vue';
 
 const useZebar = defineStore('useZebar', () => {
   const providers = zebar.createProviderGroup({
-    audio: { type: 'audio' },
     cpu: { type: 'cpu' },
     glazewm: { type: 'glazewm' },
     battery: { type: 'battery' },
     memory: { type: 'memory' },
-    weather: { type: 'weather' },
     media: { type: 'media' },
+    network: { type: 'network', refreshInterval: 600, },
+    date: { type: 'date', formatting: 'EEE d MMM hh:mm a', refreshInterval: 600, },
   });
 
   const event = ref(providers.outputMap);
