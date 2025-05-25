@@ -18,11 +18,13 @@ const zebar = useZebar();
       </span>
       <span class='flex justify-center items-center text-green-500'>
         <ArrowBigUpDash class='w-4' />
-        {{ zebar.event.network?.traffic?.received?.siValue }} {{ zebar.event.network?.traffic?.received?.siUnit }}
+        {{ zebar.event.network?.traffic?.received?.siValue.toFixed(2) }} {{
+          zebar.event.network?.traffic?.received?.siUnit }}
       </span>
       <span class='flex justify-center items-center text-red-500'>
         <ArrowBigDownDash class='w-4' />
-        {{ zebar.event.network?.traffic?.received?.siValue }} {{ zebar.event.network?.traffic?.received?.siUnit }}
+        {{ zebar.event.network?.traffic?.received?.siValue.toFixed(2) }} {{
+          zebar.event.network?.traffic?.received?.siUnit }}
       </span>
     </Island>
   </BlinkTransition>
