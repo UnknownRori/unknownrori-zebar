@@ -7,7 +7,7 @@ const zebar = useZebar();
 </script>
 <template>
   <Island>
-    <span class='flex justify-center items-center'>
+    <span class='flex justify-center items-center z-100'>
       {{ zebar.event.date?.formatted }}
     </span>
   </Island>

@@ -7,11 +7,13 @@ import {
   ResourceWidget,
   DateWidget,
   AudioWidget,
+  StarryWidget,
 } from '@/components/widgets';
 </script>
 
 <template>
   <BaseLayout>
+    <StarryWidget />
     <div class="flex justify-center items-center gap-4">
       <WorkspaceWidget />
       <InternetWidget />

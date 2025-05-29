@@ -4,3 +4,5 @@ export { default as InternetWidget } from './InternetWidget.vue';
 export { default as ResourceWidget } from './ResourceMonitorWidget.vue';
 export { default as DateWidget } from './DateWidget.vue';
 export { default as AudioWidget } from './AudioWidget.vue';
+
+export { default as StarryWidget } from './StarryWidget.vue';

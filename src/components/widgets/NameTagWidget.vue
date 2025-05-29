@@ -1,5 +1,9 @@
+<script lang="ts" setup>
+import { Island } from '@/components/ui/island';
+</script>
+
 <template>
-  <span class='relative flex justify-center items-center font-bold'>
+  <Island>
     UnknownRori II
-  </span>
+  </Island>
 </template>
