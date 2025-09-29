@@ -19,7 +19,7 @@ const media = useMediaPlayer();
       <Music4 class='w-4' />
       {{ truncateText(media.event.title as string, 24) }}
       <div
-        class="absolute left-0 bottom-0 h-1 rounded-full -z-10 bg-cyan-400 animate-pulse shadow-[0_0_8px_#22d3ee,0_0_16px_#22d3ee]"
+        class="absolute left-0 top-0 bottom-0 h-1 rounded-full -z-10 bg-cyan-400 animate-pulse shadow-[0_0_8px_#22d3ee,0_0_16px_#22d3ee]"
         :style="{ width: media.progress.toFixed(2) + '%' }"></div>
       <BlinkTransition>
         <Play v-if='media.event.isPlaying' class='w-2' />
